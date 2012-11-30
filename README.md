@@ -1,4 +1,4 @@
-#JSON library for C#
+#JSON library for Unity
 
 ##Usage
 
