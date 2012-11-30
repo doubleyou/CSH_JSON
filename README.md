@@ -30,7 +30,7 @@ string s1 = json_obj.ToString();
 ### Parsing
 
 ```c#
-JSON json = new JSON("{\"key": \"value\"}");
+JSON json = new JSON("{\"key\": \"value\"}");
 
 string s = json["key"];
 ```
