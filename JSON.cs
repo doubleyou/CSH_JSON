@@ -383,7 +383,8 @@ public class JSON : IEnumerable {
 			foreach (KeyValuePair<string,JSON> item in object_data) {
 				json += "\"" + item.Key + "\":" + item.Value.ToString() + ",";
 			}
-			json = json.Remove(json.Length - 1);
+			if (json.Length > 0)
+				json = json.Remove(json.Length - 1);
 			json = "{" + json + "}";
 			break;
 		case JSONType.ARRAY:
