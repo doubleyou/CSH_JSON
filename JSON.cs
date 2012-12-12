@@ -94,13 +94,13 @@ public class JSON : IEnumerable {
 				
 			// Object end
 			case '}':
-				if (current == this) return;
+				if (System.Object.ReferenceEquals(current, this)) return;
 				UpOneLevel (ref current);
 				break;
 				
 			// Array start
 			case '[':
-				if (current == this) return;
+				if (System.Object.ReferenceEquals(current, this)) return;
 				if (current.Type == JSONType.NULL) current.Type = JSONType.ARRAY;
 				NewArrayElement(ref current);
 				break;
